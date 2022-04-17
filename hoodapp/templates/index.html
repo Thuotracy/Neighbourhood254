@@ -13,7 +13,7 @@
               <h5 class="card-title">{{ hood.name }}  ({{hood.location}}) <span class="ml-4">{{hood.members.count}} member{{hood.members.count|pluralize}}</span></h5>
               <p class="card-text">{{hood.description}}</p>
               {% if request.user.profile.location == hood %}
-              <a href="{% url 'leave-hood' hood.id %}" class="btn btn-outline-danger btn-sm">Left Hood</a>
+              <a href="{% url 'leave-hood' hood.id %}" class="btn btn-outline-danger btn-sm">Leave Hood</a>
               {% elif not request.user.profile.location %}
               <a href="{% url 'join-hood' hood.id %}" class="btn btn-primary btn-sm">Join Hood</a>
               {% endif %}
