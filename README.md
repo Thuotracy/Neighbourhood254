@@ -1,75 +1,73 @@
+## Neighbourhood254
+
+## Author
+ Tracy Wanagri
+
 # Neighbourhood  Description
-This is an app that helps you stay in the loop on current news in your neighbourhood. Through the app, you can also view businesses near you and be able to connect with those business owners.
+ This is an app that helps you stay in the loop on current news in your neighbourhood. Through the app, you can also view businesses near you and be able to connect with those business owners. -->
 
-##  Live Link 
-To view the site, click [here](https://thehood254.herokuapp.com/)
+## Set Up and Installations
 
-## Admin Dashboard credentials
-username : u45142
-password :admin2020
-## Screenshots 
-###### Home page
-<img src= "https://user-images.githubusercontent.com/51013354/127110257-d43937ec-758d-4f3b-a805-c90df296b45a.png">
+### Prerequisites
+    - Python3.8.10
+    - Postgres
+    - python virtual environment (virtual:venv).
+    - Visual Studio Code Editor.
 
-## User Story  
-  
-* Sign in with the application to start using.
-* Set up a profile about me and a general location and my neighborhood name.
-* Find a list of different businesses in my neighborhood.
-* Find Contact Information for the health department and Police authorities near my neighborhood.
-* Create Posts that will be visible to everyone in my neighborhood.
-* Change My neighborhood when I decide to move out.
-* Only view details of a single neighborhood.
+### Clone the  project Repo
+Run the following command on the terminal:
+ https://github.com/Thuotracy/Neighbourhood254.git
+* cd Neighbourhood254
 
-## Setup and Installation  
-To get the project follow these steps:
+###  Install and activate virtual environment
+Activate virtual environment using python3.8 
+1. Install
+* python3 -m venv newenv
+2. Activate
+source newenv/bin/activate
 
-##### Cloning the repository:  
- ```bash 
-https://github.com/ThiraTheNerd/neighbourhood.git
-```
-##### Navigate into the folder and install requirements  
- ```bash 
-cd neighbourhood 
-```
-##### Install and activate Virtual  
- ```bash 
-- python3 -m venv virtual - source virtual/bin/activate  
-```
-##### Install Dependencies  
- ```bash 
- pip install -r requirements.txt 
-``` 
- ##### Setup Database
- Create a .env file and fill in the configurations for your database and application.
- python manage.py makemigrations hoodapp
- ``` 
- Now Migrate  
- ```bash 
- python manage.py migrate 
-```
-##### Run the application  
- ```bash 
- python manage.py runserver 
-``` 
-##### Testing the application  
- ```bash 
- python manage.py test 
-```
-Open the application on your browser `127.0.0.1:8000`.  
+### Install dependancies
+Install  all dependancies that will make the app run/function
+* pip install -r requirements.txt
 
-  
-## Technology used  
-  
-* [Python3.6](https://www.python.org/)  
-* [Django 2.2.6](https://docs.djangoproject.com/en/2.2/)  
-* [Heroku](https://heroku.com)  
+### Create the Database
+* psql
+* create database neighbourhood254;
 
-  
-## Known Bugs  
-* There are no known bugs currently but pull requests are allowed incase you spot a bug
-## Contact Information   
-If you have any question or contributions, please email me at [thiragithinji@gmail.com] 
+### Make Migrations
+* python3 manage.py makemigrations starproject(App name)
+* python3 manage.py migrate
 
-## License 
-* Copyright (c) 2021 **ThiraTheNerd**
+### Run the app
+* python3 manage.py runserver
+* open your browser with the local host; `127.0.0.1:8000` provided on the terminal
+
+## Testing the application
+* python3 manage.py test starproject
+
+### Admin dashboard
+`Username: tracy`
+`Password: wangari`
+
+### Technologies used
+    - Python 
+    - HTML
+    - Django 
+    - Bootstrap4
+    - Heroku
+    - Postgresql
+    - GIT
+
+### Live Link
+
+
+
+### License
+
+Neighbourhood254 is under the ***[MIT](LICENSE)*** license.
+
+
+
+
+
+
