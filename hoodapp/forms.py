@@ -6,7 +6,7 @@ from .models import Profile, Hood, Business, News
 class EditProfileForm(forms.ModelForm):
   class Meta:
     model = Profile
-    exclude = ('user', 'location')
+    exclude = ('user', 'location', 'Facebook', 'twitter', 'Website url', 'Instagram')
 
 class BusinessForm(forms.ModelForm):
   class Meta:
