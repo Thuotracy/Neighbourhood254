@@ -15,7 +15,7 @@
               {% if request.user.profile.location == hood %}
               <a href="{% url 'leave-hood' hood.id %}" class="btn btn-outline-danger btn-sm">Leave Hood</a>
               {% elif not request.user.profile.location %}
-              <a href="{% url 'join-hood' hood.id %}" class="btn btn-primary btn-sm">Join Hood</a>
+              <a href="{% url 'join-hood' hood.id %}" class="btn btn-primary btn-sm">join Hood</a>
               {% endif %}
           </div>
       </div>
