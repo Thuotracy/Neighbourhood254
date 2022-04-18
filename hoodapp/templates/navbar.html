@@ -29,7 +29,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'index' %}">
             <i class="fa fa-hom"></i>
-            Home
+            <h2>Home</h2>
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -39,7 +39,7 @@
             <i class="fa fa-envelope-o">
               <span class="badge badge-danger">11</span>
             </i>
-            My Neighbourood
+            <h2>Neighbourood</h2>
           </a>
         </li>
         {% endif %}
@@ -47,25 +47,21 @@
           <a class="nav-link " href="">
             <i class="fa fa-envelope-o">
             </i>
-            Businesses
+            <h2>Businesses</h2>
           </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="{% url 'profile' user.username %}">
             <i class="fa fa-envelope-o"></i>
             </i>
-            Profile
+            <h2>Profile</h2>
           </a>
         </li>
       </ul>
       {% if user.profile.location %}
       <span class="badge badge-secondary"
         style="margin-right: 40px; padding: 10px; font-size: large;">{{user.profile.location.name}}</span>
-      {% else %}
-      <div class="alert alert-warning" role="alert" style="margin-right: 40px;">
-        <h3>Join Neighbourood for further Infomation</h3>
-      </div>
-      {% endif %}
+     
       <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
