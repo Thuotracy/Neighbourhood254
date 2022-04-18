@@ -37,18 +37,13 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'view-hood' user.profile.location.id%}">
             <i class="fa fa-envelope-o">
+             
             </i>
-            <h2>Neighbourood</h2>
+            <h2>My Neighbourood</h2>
           </a>
         </li>
         {% endif %}
-        <li class="nav-item">
-          <a class="nav-link " href="">
-            <i class="fa fa-envelope-o">
-            </i>
-            <h2>Businesses</h2>
-          </a>
-        </li>
+    
         <li class="nav-item">
           <a class="nav-link" href="{% url 'profile' user.username %}">
             <i class="fa fa-envelope-o"></i>
@@ -60,11 +55,14 @@
       {% if user.profile.location %}
       <span class="badge badge-secondary"
         style="margin-right: 40px; padding: 10px; font-size: large;">{{user.profile.location.name}}</span>
-      {% endif %}
       
+      
+      {% endif %}
+     
       <ul class="navbar-nav ">
         {% if user.is_authenticated %}
         <li class="nav-item active" style="padding-left: 10px;">
+          <a><img class="rounded-circle nav-img" src="{{ user.profile.profile_pic.url }}" alt=""></a></li>
           {{user.profile.full_name}}
           <a href="{% url 'logout' %}" type="button" style="margin-top: 20px; margin-left: 5px; color: white;"><h2>Logout</h2></a>
         {% else %}

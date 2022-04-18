@@ -3,7 +3,7 @@
 {% block content%}
 {% include "navbar.html" %}
 <div class="container">
-  <a href="{% url 'new-hood' %}" class="btn btn-sm btn-info mb-4"><h3>New Neighbourood</h3></a>
+  <a href="{% url 'new-hood' %}" class="btn btn-sm btn-success mb-2"><h2>New Neighbourood</h2></a>
 <div class="row">
   {% for hood in hoods %}
   <div class="col-md-4">
@@ -13,9 +13,9 @@
               <h5 class="card-title">{{ hood.name }}  ({{hood.location}}) <span class="ml-4">{{hood.members.count}} member{{hood.members.count|pluralize}}</span></h5>
               <p class="card-text">{{hood.description}}</p>
               {% if request.user.profile.location == hood %}
-              <a href="{% url 'leave-hood' hood.id %}" class="btn btn-outline-danger btn-sm">Leave Neighbourood</a>
+              <a href="{% url 'leave-hood' hood.id %}" class="btn btn-outline-danger btn-sm">Leave Hood</a>
               {% elif not request.user.profile.location %}
-              <a href="{% url 'join-hood' hood.id %}" class="btn btn-primary btn-sm">Join Neighbourood</a>
+              <a href="{% url 'join-hood' hood.id %}" class="btn btn-success btn-sm">Join Hood</a>
               {% endif %}
           </div>
       </div>
