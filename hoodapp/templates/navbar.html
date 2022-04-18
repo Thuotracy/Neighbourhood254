@@ -50,8 +50,8 @@
             <h2>Businesses</h2>
           </a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{% url 'profile' user.username %}">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' user.username %}">
             <i class="fa fa-envelope-o"></i>
             </i>
             <h2>Profile</h2>
@@ -61,17 +61,13 @@
       {% if user.profile.location %}
       <span class="badge badge-secondary"
         style="margin-right: 40px; padding: 10px; font-size: large;">{{user.profile.location.name}}</span>
-     
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
+      {% endif %}
+      
       <ul class="navbar-nav ">
         {% if user.is_authenticated %}
         <li class="nav-item active" style="padding-left: 10px;">
-          <!-- <a><img class="rounded-circle nav-img" src="{{ user.profile.profile_pic.url }}" alt=""></a></li> -->
           {{user.profile.full_name}}
-          <a href="{% url 'logout' %}" type="button" style="margin-top: 20px; margin-left: 5px; color: white;">Logout</a>
+          <a href="{% url 'logout' %}" type="button" style="margin-top: 20px; margin-left: 5px; color: white;"><h2>Logout</h2></a>
         {% else %}
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
