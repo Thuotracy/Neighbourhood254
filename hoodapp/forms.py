@@ -11,7 +11,7 @@ class EditProfileForm(forms.ModelForm):
 class BusinessForm(forms.ModelForm):
   class Meta:
     model = Business
-    exclude = ('owner', 'hood')
+    exclude = ('owner', 'hood', 'Facebook*', 'Twitter*', 'Instagram*')
 
 class HoodForm(forms.ModelForm):
     class Meta:
